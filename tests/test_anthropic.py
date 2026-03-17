@@ -5,9 +5,8 @@ from __future__ import annotations
 import os
 from typing import Any
 
+import httpx
 import pytest
-
-httpx = pytest.importorskip("httpx", reason="httpx not installed")
 
 pytestmark = pytest.mark.skipif(
     "ANTHROPIC_API_KEY" not in os.environ,
